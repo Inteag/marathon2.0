@@ -1,0 +1,512 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{31CB75BD-4347-4276-90AF-5949738F8D1A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>marathon</RootNamespace>
+    <AssemblyName>marathon</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.19.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Web, Version=8.0.19.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MySql.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Universal, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Universal.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AuthicationLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuthicationLogin.Designer.cs">
+      <DependentUpon>AuthicationLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MySqlData.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Администрация\Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Администрация\Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Администрация\adminblago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Администрация\adminblago.Designer.cs">
+      <DependentUpon>adminblago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Администрация\AdminUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Администрация\AdminUser.Designer.cs">
+      <DependentUpon>AdminUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Администрация\AdminVolonter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Администрация\AdminVolonter.Designer.cs">
+      <DependentUpon>AdminVolonter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Администрация\BlagoAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Администрация\BlagoAdd.Designer.cs">
+      <DependentUpon>BlagoAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Администрация\Inventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Администрация\Inventory.Designer.cs">
+      <DependentUpon>Inventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Администрация\InventoryAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Администрация\InventoryAdd.Designer.cs">
+      <DependentUpon>InventoryAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Администрация\VolonterAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Администрация\VolonterAdd.Designer.cs">
+      <DependentUpon>VolonterAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Бегун\MenuRunner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Бегун\MenuRunner.Designer.cs">
+      <DependentUpon>MenuRunner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Бегун\MyResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Бегун\MyResult.Designer.cs">
+      <DependentUpon>MyResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Бегун\MySponsor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Бегун\MySponsor.Designer.cs">
+      <DependentUpon>MySponsor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Бегун\Regmarathon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Бегун\Regmarathon.Designer.cs">
+      <DependentUpon>Regmarathon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Бегун\RunnerReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Бегун\RunnerReg.Designer.cs">
+      <DependentUpon>RunnerReg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Бегун\UpdateRunner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Бегун\UpdateRunner.Designer.cs">
+      <DependentUpon>UpdateRunner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Координатор\Coordinatormenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Координатор\Coordinatormenu.Designer.cs">
+      <DependentUpon>Coordinatormenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Координатор\RunnerCordinator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Координатор\RunnerCordinator.Designer.cs">
+      <DependentUpon>RunnerCordinator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Координатор\Runnreup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Координатор\Runnreup.Designer.cs">
+      <DependentUpon>Runnreup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Координатор\Sertificat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Координатор\Sertificat.Designer.cs">
+      <DependentUpon>Sertificat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Координатор\SponsorCordinator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Координатор\SponsorCordinator.Designer.cs">
+      <DependentUpon>SponsorCordinator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Марафон\InfMarathon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Марафон\InfMarathon.Designer.cs">
+      <DependentUpon>InfMarathon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Марафон\listblagoorg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Марафон\listblagoorg.Designer.cs">
+      <DependentUpon>listblagoorg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Марафон\Marathonmap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Марафон\Marathonmap.Designer.cs">
+      <DependentUpon>Marathonmap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Марафон\MarathonTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Марафон\MarathonTime.Designer.cs">
+      <DependentUpon>MarathonTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Марафон\Result.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Марафон\Result.Designer.cs">
+      <DependentUpon>Result.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Спонсоры\fanksponsor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Спонсоры\fanksponsor.Designer.cs">
+      <DependentUpon>fanksponsor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Спонсоры\infblago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Спонсоры\infblago.Designer.cs">
+      <DependentUpon>infblago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Спонсоры\sponsorruner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Спонсоры\sponsorruner.Designer.cs">
+      <DependentUpon>sponsorruner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Марафон\helpmarathon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Марафон\helpmarathon.Designer.cs">
+      <DependentUpon>helpmarathon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Бегун\chooseRunner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Бегун\chooseRunner.Designer.cs">
+      <DependentUpon>chooseRunner.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AuthicationLogin.resx">
+      <DependentUpon>AuthicationLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Администрация\Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Администрация\adminblago.resx">
+      <DependentUpon>adminblago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Администрация\AdminUser.resx">
+      <DependentUpon>AdminUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Администрация\AdminVolonter.resx">
+      <DependentUpon>AdminVolonter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Администрация\BlagoAdd.resx">
+      <DependentUpon>BlagoAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Администрация\Inventory.resx">
+      <DependentUpon>Inventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Администрация\InventoryAdd.resx">
+      <DependentUpon>InventoryAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Администрация\VolonterAdd.resx">
+      <DependentUpon>VolonterAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Бегун\chooseRunner.resx">
+      <DependentUpon>chooseRunner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Бегун\MenuRunner.resx">
+      <DependentUpon>MenuRunner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Бегун\MyResult.resx">
+      <DependentUpon>MyResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Бегун\MySponsor.resx">
+      <DependentUpon>MySponsor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Бегун\Regmarathon.resx">
+      <DependentUpon>Regmarathon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Бегун\RunnerReg.resx">
+      <DependentUpon>RunnerReg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Бегун\UpdateRunner.resx">
+      <DependentUpon>UpdateRunner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Координатор\Coordinatormenu.resx">
+      <DependentUpon>Coordinatormenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Координатор\RunnerCordinator.resx">
+      <DependentUpon>RunnerCordinator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Координатор\Runnreup.resx">
+      <DependentUpon>Runnreup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Координатор\Sertificat.resx">
+      <DependentUpon>Sertificat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Координатор\SponsorCordinator.resx">
+      <DependentUpon>SponsorCordinator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Марафон\helpmarathon.resx">
+      <DependentUpon>helpmarathon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Марафон\InfMarathon.resx">
+      <DependentUpon>InfMarathon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Марафон\listblagoorg.resx">
+      <DependentUpon>listblagoorg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Марафон\Marathonmap.resx">
+      <DependentUpon>Marathonmap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Марафон\MarathonTime.resx">
+      <DependentUpon>MarathonTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Марафон\Result.resx">
+      <DependentUpon>Result.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Спонсоры\fanksponsor.resx">
+      <DependentUpon>fanksponsor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Спонсоры\infblago.resx">
+      <DependentUpon>infblago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Спонсоры\sponsorruner.resx">
+      <DependentUpon>sponsorruner.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resours\charity-descriptions.pdf" />
+    <None Include="Resours\charity-logos.pptx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resours\logo\marathon-skills-2014-certificate-seal.png" />
+    <None Include="Resours\teatro-municipal.jpg" />
+    <None Include="Resours\marathon-image.jpg" />
+    <None Include="Resours\banco-banespa.jpg" />
+    <Content Include="Resours\flag\flag_andorra.png" />
+    <Content Include="Resours\flag\flag_argentina.png" />
+    <Content Include="Resours\flag\flag_australia.png" />
+    <Content Include="Resours\flag\flag_austria.png" />
+    <Content Include="Resours\flag\flag_belgium.png" />
+    <Content Include="Resours\flag\flag_botswana.png" />
+    <Content Include="Resours\flag\flag_brazil.png" />
+    <Content Include="Resours\flag\flag_bulgaria.png" />
+    <Content Include="Resours\flag\flag_cameroon.png" />
+    <Content Include="Resours\flag\flag_canada.png" />
+    <Content Include="Resours\flag\flag_central_african_republic.png" />
+    <Content Include="Resours\flag\flag_chile.png" />
+    <Content Include="Resours\flag\flag_china.png" />
+    <Content Include="Resours\flag\flag_chinese_taipei.png" />
+    <Content Include="Resours\flag\flag_colombia.png" />
+    <Content Include="Resours\flag\flag_croatia.png" />
+    <Content Include="Resours\flag\flag_czech_republic.png" />
+    <Content Include="Resours\flag\flag_denmark.png" />
+    <Content Include="Resours\flag\flag_dominican_republic.png" />
+    <Content Include="Resours\flag\flag_ecuador.png" />
+    <Content Include="Resours\flag\flag_egypt.png" />
+    <Content Include="Resours\flag\flag_el_salvador.png" />
+    <Content Include="Resours\flag\flag_equatorial_guinea.png" />
+    <Content Include="Resours\flag\flag_estonia.png" />
+    <Content Include="Resours\flag\flag_finland.png" />
+    <Content Include="Resours\flag\flag_france.png" />
+    <Content Include="Resours\flag\flag_germany.png" />
+    <Content Include="Resours\flag\flag_greece.png" />
+    <Content Include="Resours\flag\flag_guatemala.png" />
+    <Content Include="Resours\flag\flag_guinea-bissau.png" />
+    <Content Include="Resours\flag\flag_guinea.png" />
+    <Content Include="Resours\flag\flag_honduras.png" />
+    <Content Include="Resours\flag\flag_hong_kong.png" />
+    <Content Include="Resours\flag\flag_hungary.png" />
+    <Content Include="Resours\flag\flag_india.png" />
+    <Content Include="Resours\flag\flag_indonesia.png" />
+    <Content Include="Resours\flag\flag_ireland.png" />
+    <Content Include="Resours\flag\flag_israel.png" />
+    <Content Include="Resours\flag\flag_italy.png" />
+    <Content Include="Resours\flag\flag_ivory_coast.png" />
+    <Content Include="Resours\flag\flag_jamaica.png" />
+    <Content Include="Resours\flag\flag_japan.png" />
+    <Content Include="Resours\flag\flag_jordan.png" />
+    <Content Include="Resours\flag\flag_kenya.png" />
+    <Content Include="Resours\flag\flag_latvia.png" />
+    <Content Include="Resours\flag\flag_liechtenstein.png" />
+    <Content Include="Resours\flag\flag_lithuania.png" />
+    <Content Include="Resours\flag\flag_luxembourg.png" />
+    <Content Include="Resours\flag\flag_macau.png" />
+    <Content Include="Resours\flag\flag_macedonia.png" />
+    <Content Include="Resours\flag\flag_madagascar.png" />
+    <Content Include="Resours\flag\flag_malaysia.png" />
+    <Content Include="Resours\flag\flag_mali.png" />
+    <Content Include="Resours\flag\flag_malta.png" />
+    <Content Include="Resours\flag\flag_mauritius.png" />
+    <Content Include="Resours\flag\flag_mexico.png" />
+    <Content Include="Resours\flag\flag_moldova.png" />
+    <Content Include="Resours\flag\flag_monaco.png" />
+    <Content Include="Resours\flag\flag_montenegro.png" />
+    <Content Include="Resours\flag\flag_netherlands.png" />
+    <Content Include="Resours\flag\flag_new_zealand.png" />
+    <Content Include="Resours\flag\flag_nicaragua.png" />
+    <Content Include="Resours\flag\flag_niger.png" />
+    <Content Include="Resours\flag\flag_norway.png" />
+    <Content Include="Resours\flag\flag_panama.png" />
+    <Content Include="Resours\flag\flag_paraguay.png" />
+    <Content Include="Resours\flag\flag_peru.png" />
+    <Content Include="Resours\flag\flag_philippines.png" />
+    <Content Include="Resours\flag\flag_poland.png" />
+    <Content Include="Resours\flag\flag_portugal.png" />
+    <Content Include="Resours\flag\flag_puerto_rico.png" />
+    <Content Include="Resours\flag\flag_qatar.png" />
+    <Content Include="Resours\flag\flag_romania.png" />
+    <Content Include="Resours\flag\flag_russia.png" />
+    <Content Include="Resours\flag\flag_saudi_arabia.png" />
+    <Content Include="Resours\flag\flag_senegal.png" />
+    <Content Include="Resours\flag\flag_singapore.png" />
+    <Content Include="Resours\flag\flag_slovakia.png" />
+    <Content Include="Resours\flag\flag_south_africa.png" />
+    <Content Include="Resours\flag\flag_south_korea.png" />
+    <Content Include="Resours\flag\flag_spain.png" />
+    <Content Include="Resours\flag\flag_sweden.png" />
+    <Content Include="Resours\flag\flag_switzerland.png" />
+    <Content Include="Resours\flag\flag_thailand.png" />
+    <Content Include="Resours\flag\flag_turkey.png" />
+    <Content Include="Resours\flag\flag_united_arab_emirates.png" />
+    <Content Include="Resours\flag\flag_united_kingdom.png" />
+    <Content Include="Resours\flag\flag_uruguay.png" />
+    <Content Include="Resours\flag\flag_usa.png" />
+    <Content Include="Resours\flag\flag_vatican.png" />
+    <Content Include="Resours\flag\flag_venezuela.png" />
+    <Content Include="Resours\flag\flag_vietnam.png" />
+    <Content Include="Resours\form\arise-logo.png" />
+    <Content Include="Resours\form\aves-do-brazil-logo.png" />
+    <Content Include="Resours\form\clara-santos-oliveira-institute-logo.png" />
+    <Content Include="Resours\form\conquer-cancer-brazil.png" />
+    <Content Include="Resours\form\diabetes-brazil-logo.png" />
+    <Content Include="Resours\form\heart-health-sao-paulo-logo.png" />
+    <Content Include="Resours\form\human-rights-centre-logo.png" />
+    <Content Include="Resours\form\oxfam-international-logo.png" />
+    <Content Include="Resours\form\querstadtein-logo.png" />
+    <Content Include="Resours\form\save-the-children-fund-logo.png" />
+    <Content Include="Resours\form\stay-pumped-logo.png" />
+    <Content Include="Resours\form\the-red-cross-logo.png" />
+    <Content Include="Resours\form\upbeat-logo.png" />
+    <Content Include="Resours\form\wwsm-rescue-logo.png" />
+    <None Include="Resours\ibirapuera-park-lake.jpg" />
+    <Content Include="Resours\how-long\airbus-a380.jpg" />
+    <Content Include="Resours\how-long\bus.jpg" />
+    <Content Include="Resours\how-long\capybara.jpg" />
+    <Content Include="Resours\how-long\f1-car.jpg" />
+    <Content Include="Resours\how-long\football-field.jpg" />
+    <Content Include="Resours\how-long\horse.png" />
+    <Content Include="Resours\how-long\jaguar.jpg" />
+    <Content Include="Resours\how-long\pair-of-havaianas.jpg" />
+    <Content Include="Resours\how-long\ronaldinho.jpg" />
+    <Content Include="Resours\how-long\sloth.jpg" />
+    <Content Include="Resours\how-long\slug.jpg" />
+    <Content Include="Resours\how-long\worm.jpg" />
+    <Content Include="Resours\infoicon-148x148.png" />
+    <Content Include="Resours\logo\logo-2016-full-colour.png" />
+    <Content Include="Resours\logo\logo-2016-monochrome.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
